@@ -2,10 +2,9 @@
   "name": "task_react_slider",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "webpack",
-    "build": "NODE_ENV=production webpack"
+    "start": "node index.js"
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.35",
