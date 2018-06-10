@@ -1,0 +1,38 @@
+$animatiot_time: 3.5s;
+
+.preloader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #f7f4f4;
+
+    .circle{
+        -webkit-animation: circle_rotate $animatiot_time linear infinite;
+                animation: circle_rotate $animatiot_time linear infinite;
+    }
+}
+
+@-webkit-keyframes circle_rotate {
+    from { -webkit-transform: rotate(0deg); transform: rotate(0deg) }
+    to { -webkit-transform: rotate(360deg); transform: rotate(360deg) }
+}
+
+@keyframes circle_rotate {
+    from { -webkit-transform: rotate(0deg); transform: rotate(0deg) }
+    to { -webkit-transform: rotate(360deg); transform: rotate(360deg) }
+}

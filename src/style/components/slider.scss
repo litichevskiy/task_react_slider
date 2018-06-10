@@ -1,0 +1,169 @@
+$animatiot_time: 0.5s;
+
+.container_slider{
+    background-color: rgb(230, 230, 230);
+    text-align: center;
+    padding: 1.5em 1em;
+    margin: 0.5em 0;
+    display: inline-block;
+
+    .container_large_slide{
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .list_large_images{
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+        max-width: 900px;
+        min-width: 650px;
+        min-height: 650px;
+        max-height: 750px;
+    }
+
+    .wrapper_images{
+        position: absolute;
+        z-index: 2;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+
+        &.active{
+            opacity: 1;
+            z-index: 2;
+            -webkit-animation: animation_opacity_show $animatiot_time;
+                animation: animation_opacity_show $animatiot_time;
+        }
+    }
+
+    .large_slide{
+        -webkit-animation: animation_opacity_hide $animatiot_time;
+                animation: animation_opacity_hide $animatiot_time;
+        max-width: 100%;
+        -o-object-fit: contain;
+           object-fit: contain;
+    }
+
+    .title_large_slide{
+        font-size: 1.1em;
+        margin-bottom: 1em;
+        max-width: 1000px;
+    }
+
+    .container_list_preview{
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        width: 100%;
+        margin-top: 1.5em;
+    }
+
+    .list_preview{
+        margin: 0 1.3em;
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    .item_preview{
+        display: inline-block;
+        margin: 0.5em 0 0.5em 0.7em;
+        cursor: pointer;
+        position: relative;
+
+        &.active:before{
+            content: ' ';
+            position: absolute;
+            bottom: -10px;
+            left: 20%;
+            width: 60%;
+            height: 4px;
+            background-color: tomato;
+        }
+    }
+
+    .item_preview:nth-child(1){
+        margin-left: 0;
+    }
+
+    .preview{
+        max-width: 100%;
+        -o-object-fit: contain;
+           object-fit: contain;
+    }
+
+    .container_preview{
+        position: relative;
+        width: 150px;
+        height: 150px;
+    }
+
+    .description{
+        max-width: 150px;
+        font-size: 16px;
+        margin-bottom: 0.6em;
+        white-space: nowrap;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+    }
+}
+
+@-webkit-keyframes animation_opacity_show {
+    from { opacity: 0.2; }
+    to { opacity: 1; }
+}
+
+@keyframes animation_opacity_show {
+    from { opacity: 0.2; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes animation_opacity_hide {
+    from { opacity: 1; }
+    to { opacity: 0.2; }
+}
+
+@keyframes animation_opacity_hide {
+    from { opacity: 1; }
+    to { opacity: 0.2; }
+}
