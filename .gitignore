@@ -1,4 +1,3 @@
 .gitignore
 .tern-project
-/dist
 /node_modules
